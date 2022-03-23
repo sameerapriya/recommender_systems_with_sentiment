@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Product Recommendation System</h2>
-<form method="post">
-    <input type="text" name="Username" placeholder="Name of the user" required="required" /><br><br>        
+<h2 class="h2" style="text-align: center;font-weight: 600;margin-top: 2rem;font-family: system-ui;">Product Recommendation System for EBUSS</h2>
+<form method="post" style="text-align: center; margin-top: 2rem;">
+    <input style="text-align: center;" type="text" name="Username" placeholder="Enter the username for EBUSS" required="required" /><br><br>        
     
-    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    <button style="text-align: center;" type="submit" class="btn btn-primary">Predict</button>
 </form>
 
   {% if flag %}
-    <h2>Sorry that was an invalid username . Please try with a valid one</h2> 
+    <h4 class="text-danger" style="font-weight: 600;font-family: system-ui;margin-top: 2rem;">Sorry that was an invalid username . Please try with a valid one.</h4> 
   {% else %}
       <br>
   {% endif %}    

@@ -1,10 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
-<h3> Here are the recommendations for you {{ name }} : </h3>      
-      <body>
-        {% for table in tables %}
-          {{ table|safe }}
+<h3 class="lead" style="font-size: 1.25rem;font-weight: 600;margin-top: 2rem;font-family: system-ui;"> Here are the recommendations for you {{ name }} : </h3>
+<table class="table table-bordered">   
+  <table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Positive Percentage</th>
+        <tr>
+    </thead>
+    <tbody>
+        {% for index, item in df %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.brand }}</td>
+            <td>{{ item.positive_perc_review }}</td>
+        </tr>
         {% endfor %}
-        <a href="{{url_for('home')}}"><p>Back to home page</p></a>
-      </body>
+    </tbody>
+</table>
+</table> 
+<div style="text-align: center;">
+    <a href="{{url_for('home')}}" class="btn btn-outline-info" tabindex="-1" role="button" aria-disabled="true">Back to Home</a>
+</div>
 {% endblock content %}

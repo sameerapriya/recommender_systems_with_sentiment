@@ -20,7 +20,7 @@ def home():
 def submit(name):
     if product_recommendation.valid_input_checker(name):
         df = product_recommendation.get_recommendation_from_username(name)
-        return render_template('result.html', name=name, tables=[df.to_html(classes='data', header=True)])
+        return render_template('result.html', name=name, tables=[df.to_html(classes='data', header=True)] ,df=df.iterrows())
     else:
         flag = True
         return redirect(url_for('home', name=name, flag=flag))
