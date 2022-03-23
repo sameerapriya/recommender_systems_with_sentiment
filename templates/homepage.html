@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Product Recommendation System</h2>
+<form method="post">
+    <input type="text" name="Username" placeholder="Name of the user" required="required" /><br><br>        
+    
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+
+  {% if flag %}
+    <h2>Sorry that was an invalid username . Please try with a valid one</h2> 
+  {% else %}
+      <br>
+  {% endif %}    
+{% endblock content %}

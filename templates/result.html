@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h3> Here are the recommendations for you {{ name }} : </h3>      
+      <body>
+        {% for table in tables %}
+          {{ table|safe }}
+        {% endfor %}
+        <a href="{{url_for('home')}}"><p>Back to home page</p></a>
+      </body>
+{% endblock content %}

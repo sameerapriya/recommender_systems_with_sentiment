@@ -1,0 +1,11 @@
+flask
+pandas
+numpy
+matplotlib
+nltk
+xgboost
+gevent
+seaborn
+scikit-learn
+imblearn
+gunicorn==20.0.4
