@@ -5,15 +5,17 @@
   <table class="table table-bordered table-hover">
     <thead>
         <tr>
+            <th>S.no</th>
             <th>Name</th>
             <th>Brand</th>
             <th>Positive Percentage</th>
         <tr>
     </thead>
     <tbody>
-        {% for index, item in df %}
+        {% for index, item in df_iter %}
         <tr>
-            <td>{{ item.name }}</td>
+            <td>{{ index }}</td>
+            <td>{{ " ".join(df.iloc[[index]].name.tolist()) }}</td>
             <td>{{ item.brand }}</td>
             <td>{{ item.positive_perc_review }}</td>
         </tr>
